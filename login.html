@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Events - Event Planner</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body class="login-body">
     <header>
         <div class="Container">
-        <h1 class="logo">Spark Events</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About US</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Photos</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
-            </ul>
-        </nav>
+            <h1 class="logo">Spark Events</h1>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About US</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photos</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <form method="post" id="loginForm">
+            <fieldset>
+                <legend>Login </legend>
+                <input type="text" name="t1" placeholder="Username or email" id="username"><br><br>
+                <input type="password" name="p1" placeholder="password" id="password"><br><br>
+                <button class="login-btn" class="login">Continue</button>
+
+            </fieldset>
+        </form>
+
+        <script>
+            document.getElementById("loginForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                const Username = document.getElementById("username").value;
+                const Password = document.getElementById("password").value;
+
+                if (Username == "admin" && Password === "1234") {
+                    alert("login successful!");
+                } else {
+                    alert("Invalid username or password.");
+
+                }
+
+            });
+
+        </script>
     </div>
-</header>
-
-<div class="login-container">
-    <form method="post" id="loginForm">
-        <fieldset>
-            <legend>Login </legend>
-            <input type="text" name="t1" placeholder="Username or email" id="username"><br><br>
-            <input type="password" name="p1" placeholder="password" id="password"><br><br>
-            <button class="login-btn" class="login">Continue</button>
-
-        </fieldset>
-    </form>
-
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(e){
-            e.preventDefault();
-            const Username = document.getElementById("username").value;
-            const Password = document.getElementById("password").value;
-
-            if (Username == "admin" && Password === "1234"){
-                alert("login successful!");
-            }else{
-                alert("Invalid username or password.");
-
-            }
-            
-        });
-
-    </script>
-</div>
-<footer class="footer">
-     <div class="footer-links">
+    <footer class="footer">
+        <div class="footer-links">
             <div class="nav-links">
                 <a href="FAQ.html">FAQ</a>
                 <a href="Blog.html">Blog</a>
@@ -61,6 +66,15 @@
             <p>&copy; 2025 Spark Events. All rights reserved.</p>
         </div>
 
-</footer>
+    </footer>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('navbar');
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    </script>
 </body>
+
 </html>
