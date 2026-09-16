@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Events | Events Planner</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body class="contact-body">
     <header>
         <div class="Container">
-        <h1 class="logo">Spark Events</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About US</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Photos</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
-            </ul>
-        </nav>
+            <h1 class="logo">Spark Events</h1>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About US</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photos</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+
+        <form method="post" id="myForm">
+            <fieldset>
+                <legend>Your Information</legend>
+
+                <div>
+                    <label>Full Name :
+                        <input type="text" name="t1" placeholder="Enter Full Name">
+                    </label><br><br>
+                </div>
+
+                <div>
+                    <label>Your Email :
+                        <input type="email" name="e1" placeholder="Enter Your email">
+                    </label><br><br>
+                </div>
+
+                <div><label>Event Type :
+                        <select>
+                            <option> Weddings</option>
+                            <option> Birthday</option>
+                            <option> Graduations</option>
+                            <option> Small party</option>
+                            <option> Other...</option>
+                        </select></label><br><br></div>
+
+                <div>
+                    <label>Date of Event :
+                        <input type="date" name="d1">
+                    </label><br><br>
+                </div>
+
+                <div>
+                    <label>Message</label>
+                    <textarea name="message" id="message" rows="4"
+                        placeholder="Tell us more about your event..."></textarea><br><br>
+                </div>
+
+                <button type="submit" class="btn">submit</button>
+
+            </fieldset>
+        </form>
+
+        <script>
+            const form = document.getElementById("myForm");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                alert("form submitted!");
+
+            });
+        </script>
     </div>
-</header>
-<div class="contact-container">
-    <h2>Contact Us</h2>
-
-<form method="post" id="myForm">
-    <fieldset>
-<legend>Your Information</legend>
-
-<div>
-    <label>Full Name : 
-        <input type="text" name="t1" placeholder="Enter Full Name">
-    </label><br><br>
-</div>
-
-<div>
-    <label>Your Email : 
-        <input type="email" name="e1" placeholder="Enter Your email">
-    </label><br><br>
-</div>
-
-<div><label>Event Type :
-<select> 
-    <option> Weddings</option>
-    <option> Birthday</option>
-    <option> Graduations</option>
-    <option> Small party</option>
-    <option> Other...</option>
-</select></label><br><br></div>
-
-<div>
-    <label>Date of Event : 
-        <input type="date" name="d1" >
-    </label><br><br>
-</div>
-
-<div>
-    <label>Message</label>
-    <textarea name="message" id="message" rows="4" placeholder="Tell us more about your event..."></textarea><br><br>
-</div>
-
-<button type="submit" class="btn">submit</button>
-
- </fieldset>
-</form>
-
-<script>
-    const form = document.getElementById("myForm");
-    form.addEventListener("submit", function (e)  {
-        e.preventDefault();
-        alert("form submitted!");
-
-    });
-</script>
-</div>
-<footer class="footer">
-     <div class="footer-links">
+    <footer class="footer">
+        <div class="footer-links">
             <div class="nav-links">
                 <a href="FAQ.html">FAQ</a>
                 <a href="Blog.html">Blog</a>
@@ -85,6 +91,15 @@
             <p>&copy; 2025 Spark Events. All rights reserved.</p>
         </div>
 
-</footer>
+    </footer>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('navbar');
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    </script>
 </body>
+
 </html>
