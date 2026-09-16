@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Spark Events | Events Planner</title>
-</head>
-<body>
-    <header>
-        <div class="Container">
-        <h1 class="logo">Spark Events</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About US</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Photos</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<body>
-  <section class="about">
-    <div class="container">
-      <h1>About Us</h1>
-      <p class="intro">At <span class="brand">Spark Events</span>, we specialize in creating unforgettable celebrations filled with creativity, elegance, and personal touch.</p>
-      
-      <div class="section">
-        <h2>Our Mission</h2>
-        <p>To turn your ideas into reality with beautiful, seamless, and stress-free events that reflect your unique vision and style.</p>
-      </div>
 
-      <div class="section">
-        <h2>Why Choose Us?</h2>
-        <ul class="reasons">
-          <li>✔ Personalized planning experience</li>
-          <li>✔ Unique and stylish event concepts</li>
-          <li>✔ Friendly and experienced team</li>
-          <li>✔ Full coordination from start to finish</li>
-          <li>✔ Memorable moments guaranteed</li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Spark Events | Events Planner</title>
+</head>
+
+<body>
+  <header>
+    <div class="Container">
+      <h1 class="logo">Spark Events</h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About US</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Photos</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html" class="btn-login">Login</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
-  </section>
-  <div class="work-image">
-    <a href="gallery.html" class="btn"> Our Work</a>
-    <!--<img src="imgg5.jpeg" alt="Spark Events Work Sample">
+  </header>
+
+  <body>
+    <section class="about">
+      <div class="container">
+        <h1>About Us</h1>
+        <p class="intro">At <span class="brand">Spark Events</span>, we specialize in creating unforgettable
+          celebrations filled with creativity, elegance, and personal touch.</p>
+
+        <div class="section">
+          <h2>Our Mission</h2>
+          <p>To turn your ideas into reality with beautiful, seamless, and stress-free events that reflect your unique
+            vision and style.</p>
+        </div>
+
+        <div class="section">
+          <h2>Why Choose Us?</h2>
+          <ul class="reasons">
+            <li>✔ Personalized planning experience</li>
+            <li>✔ Unique and stylish event concepts</li>
+            <li>✔ Friendly and experienced team</li>
+            <li>✔ Full coordination from start to finish</li>
+            <li>✔ Memorable moments guaranteed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="work-image">
+      <a href="gallery.html" class="btn"> Our Work</a>
+      <!--<img src="imgg5.jpeg" alt="Spark Events Work Sample">
     <img src="imgg6.jpeg" alt="Spark Events Work Sample"><br><br>-->
-  </div>
-  
-</body>
+    </div>
+
+  </body>
+
 </html>
 
 <footer class="footer">
-     <div class="footer-links">
-            <div class="nav-links">
-                <a href="FAQ.html">FAQ</a>
-                <a href="Blog.html">Blog</a>
-                <a href="Case-studies.html">Case-studies</a>
-            </div>
-            <p>&copy; 2025 Spark Events. All rights reserved.</p>
-        </div>
+  <div class="footer-links">
+    <div class="nav-links">
+      <a href="FAQ.html">FAQ</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Case-studies.html">Case-studies</a>
+    </div>
+    <p>&copy; 2025 Spark Events. All rights reserved.</p>
+  </div>
 
 </footer>
+<script>
+  const btn = document.getElementById('hamburger');
+  const nav = document.getElementById('navbar');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
 </body>
+
 </html>
