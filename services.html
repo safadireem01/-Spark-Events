@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spark Events | Events Planner</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header>
         <div class="Container">
-        <h1 class="logo">Spark Events</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About US</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Photos</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<section class="services">
-<div class="services-container">
-    <h1>"crafting Unforgettable Moments"</h1><br>
-    <p>We offer a range of event planning services tailored to your needs — whether it's a wedding, corporate event, birthday, or graduation. <br><b>Let us handle the details while you enjoy the celebration.</b></p>
+            <h1 class="logo">Spark Events</h1>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About US</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photos</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="services">
+        <div class="services-container">
+            <h1>"crafting Unforgettable Moments"</h1><br>
+            <p>We offer a range of event planning services tailored to your needs — whether it's a wedding, corporate
+                event, birthday, or graduation. <br><b>Let us handle the details while you enjoy the celebration.</b>
+            </p>
 
-    <div class="service-card">
-        <img src="img7.jpeg" alt="wedding Event">
-        <h3>weddings</h3>
-        <p>Elegant and unforgettable weddings tailored to your vision and style.</p>
-    </div>
+            <div class="service-card">
+                <img src="img7.jpeg" alt="wedding Event">
+                <h3>weddings</h3>
+                <p>Elegant and unforgettable weddings tailored to your vision and style.</p>
+            </div>
 
-    <div class="service-card">
-        <img src="img8.jpeg" alt="Corporate Events">
-        <h3>Corporate</h3>
-        <p>Professional setups for product launches, conferences, team-building, and galas.</p>
-    </div>
+            <div class="service-card">
+                <img src="img8.jpeg" alt="Corporate Events">
+                <h3>Corporate</h3>
+                <p>Professional setups for product launches, conferences, team-building, and galas.</p>
+            </div>
 
-    <div class="service-card">
-        <img src="birthdaycard.jpg" alt="Birthday Parties">
-        <h3>Birthday Parties</h3>
-        <p>Fun, stylish celebrations for all ages — from kids to adults.</p>
-    </div>
+            <div class="service-card">
+                <img src="birthdaycard.jpg" alt="Birthday Parties">
+                <h3>Birthday Parties</h3>
+                <p>Fun, stylish celebrations for all ages — from kids to adults.</p>
+            </div>
 
-   <div class="service-card">
-        <img src="graduations.webp" alt="Graduations"> 
-        <h3>Graduations</h3>
-        <p>Memorable milestones with beautiful decor, photos, and seamless coordination.</p>
-    </div> 
-</div>
+            <div class="service-card">
+                <img src="graduations.webp" alt="Graduations">
+                <h3>Graduations</h3>
+                <p>Memorable milestones with beautiful decor, photos, and seamless coordination.</p>
+            </div>
+        </div>
 
-<div class="cta-section">
-    <h2>Ready to plan your next unforgettable event?</h2>
-    <div class="cta-buttons">
-        <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-</div>
-</section>
+        <div class="cta-section">
+            <h2>Ready to plan your next unforgettable event?</h2>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
 
 
-<footer class="footer">
-     <div class="footer-links">
+    <footer class="footer">
+        <div class="footer-links">
             <div class="nav-links">
                 <a href="FAQ.html">FAQ</a>
                 <a href="Blog.html">Blog</a>
@@ -71,6 +78,15 @@
             <p>&copy; 2025 Spark Events. All rights reserved.</p>
         </div>
 
-</footer>
+    </footer>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('navbar');
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    </script>
 </body>
+
 </html>
